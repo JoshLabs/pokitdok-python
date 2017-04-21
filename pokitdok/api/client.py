@@ -154,8 +154,7 @@ class PokitDokClient(object):
             :param claims_status_request: dictionary representing a claims status request
         """
         claims_status_url = "{0}/claims/status".format(self.url_base)
-        return self._get_json_response(self.api_client.post(claims_status_url, data=json.dumps(claims_status_request),
-                                                            headers=self.json_headers))
+        return self._get_json_response(self.api_client.post(claims_status_url, data=json.dumps(claims_status_request), headers=self.json_headers))
 
     def mpc(self, code=None, **kwargs):
         """
@@ -214,8 +213,7 @@ class PokitDokClient(object):
             :param enrollment_request: dictionary representing an enrollment request
         """
         enrollment_url = "{0}/enrollment/".format(self.url_base)
-        return self._get_json_response(self.api_client.post(enrollment_url, data=json.dumps(enrollment_request),
-                                                            headers=self.json_headers))
+        return self._get_json_response(self.api_client.post(enrollment_url, data=json.dumps(enrollment_request), headers=self.json_headers))
 
     def enrollment_snapshot(self, trading_partner_id, x12_file):
         """
@@ -337,10 +335,7 @@ class PokitDokClient(object):
             :param referral_request: dictionary representing a referral request
         """
         referrals_url = "{0}/referrals/".format(self.url_base)
-        return self._get_json_response(
-            self.api_client.post(referrals_url, data=json.dumps(referral_request),
-                                 headers=self.json_headers)
-        )
+        return self._get_json_response(self.api_client.post(referrals_url, data=json.dumps(referral_request), headers=self.json_headers))
 
     def authorizations(self, authorizations_request):
         """
